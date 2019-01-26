@@ -1,0 +1,70 @@
+#header {
+    background-color: lightgrey;
+    text-align: center;
+    padding-bottom: 10px;    
+}
+#headerTitle {
+    font-size: 60px;
+    font-style: bold;
+}
+#home {
+    text-align: center;
+    margin-top: 60px;
+}
+#newDinnerButton {
+    margin-top: 60px;
+    font-size: 20px;
+}
+#dinnerOverview {
+    text-align: center;
+    vertical-align: center;
+    padding: 30px;
+}
+#myDinner {
+    font-size: 40px;
+}
+#goBackButton {
+    font-size: 30px;
+}
+
+#recipeButtonContainer {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#printRecipeButton {
+    font-size: 40px;
+}
+#dishPrice {
+    margin-top: 10px;
+    text-align: right;
+    color: red;
+}
+#totalTag {
+    margin-top: 176px;
+}
+
+#menuPrice {
+    color: red;
+}
+#dinnerPrintout {
+    text-align: center;
+    vertical-align: center;
+    padding: 30px;
+}
+
+
+
+@media (max-width: 978px) {
+#totalTag {
+    margin-top: 5px;
+}
+#headerTitle {
+    font-size: 50px;
+    font-style: bold;
+}
+#myDinner {
+    font-size: 35px;
+}
+}
+
