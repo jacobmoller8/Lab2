@@ -5,6 +5,9 @@ $(function () {
 	// And create the instance of ExampleView
 	var exampleView = new ExampleView($("#exampleView"));
 
+	var homeView = new homeView($('#homeView'), model);
+	var homeController = new homeController($(homeView), model);
+
 	var DinnerOverviewView = new dinnerOverviewView($('#dinner_overview'), model);
 	var DinnerOverviewController = new dinnerOverviewController($(DinnerOverviewView), model);
 
@@ -14,7 +17,7 @@ $(function () {
 	var DinnerPrintoutView = new dinnerPrintoutView($('#dinner_printout'), model);
 	var DinnerPrintoutController = new dinnerPrintoutController($(DinnerPrintoutView), model);
 
-	var DishDetailsView = new dishDetailsView($('#dish_details'), model);
+	var DishDetailsView = new dishDetailsView($('#dishDetailsView'), model);
 	var DishDetailsController = new dishDetailsController($(DishDetailsView), model);
 
 	var SelectDishAgainView = new selectDishAgainView($('#select_dish_view'), model);

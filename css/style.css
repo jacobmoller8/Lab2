@@ -70,20 +70,13 @@
 
 
 .row{
-	margin: none;;
-
+	margin: none;
 }
 
 .form-row{
 	margin: none;
 }
 
-.leftSideContainer{
-	height: 100%;
-	position: fixed;
-	border: solid;
-	border-width: 2px;
-}
 
 .sideColumnHeader{
 	background-color: grey;
@@ -118,7 +111,6 @@ float: left;
 width: 100%;
 border-radius: 0;
 padding: 5px;
-
 }
 
 .dishDesc{
@@ -150,11 +142,13 @@ background-color: lightgrey;
 text-align: center;
 padding-bottom: 10px;    
 }
+
 #mobileHeaderTitle {
 padding-top: 10px;
 font-size: 20px;
 font-style: bold;
 }
+
 #peopleSelector{
 margin-left:10px;
 }
@@ -175,3 +169,31 @@ color: darkred;
 
 }
 
+#sideBarView{
+	display: none;
+	height: 100%;
+	position: fixed;
+	border: solid;
+	border-width: 2px;
+	position: absolute;
+}
+
+#navBarView{
+	display: none;
+}
+
+#dishSearchNavView{
+	display: none;
+}
+
+#dishSearchBodyView{
+	display: none;
+}
+
+#dinner_overview{
+	display: none;
+}
+
+#dinner_printout{
+	display: none;
+}
