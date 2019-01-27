@@ -38,7 +38,7 @@ $(function () {
 	// TODO: 
 	// - VI MÅSTE LÄGGA TILL show() OCH hide() FUNKTIONER TILL VARJE VIEW
 
-	
+
 	// VARJE SCREEN ÄR EN SIDA FRÅN PROTOTYPEN
 	this.showHomeScreen = function(){
 		// I VARJE SCREEN SKA VI VISA DE "VIEWS" SOM ÄR AKTUELLA
@@ -48,18 +48,25 @@ $(function () {
 
 	this.showSelectDishScreen = function(){
 		hideAllViews();
+		// SKER MOBILANPASSNINGEN HÄR?
+		// TYP "If (device == mobile){ mobileNavBarView.show(); }" ELLER NÅGOT I STIL MED DET?
+		sideBarView.show();
+		SelectDishView.show();
 	}
 
 	this.showDishDetailsScreen = function(){
 		hideAllViews();
+		DishDetailsView.show()
 	}
 
 	this.showDinnerOverviewScreen = function(){
 		hideAllViews();
+		dinnerOverviewView.show()
 	}
 
 	this.showDinnerPrintoutScreen = function(){
 		hideAllViews();
+		dinnerPrintoutView.show()
 	}
 
 

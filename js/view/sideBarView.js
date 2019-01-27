@@ -1,6 +1,7 @@
 var sideBarView = function (container, model) {
 
     var dishSummary = container.find(".dinnerSummary");
+    var topBarSummary = container.find("#topBarSum");
     var row_start = '<div class="row">';
     var row_end = '</div>';
 
@@ -23,6 +24,7 @@ var sideBarView = function (container, model) {
     var totalSum = '<p class="sideSum offset-6 col-6" id="menuSum"> SEK ' + model.getTotalMenuPrice() + '</p>';
     var topTotalSum = '<h5 id="topBarSumText"> SEK ' + model.getTotalMenuPrice() + '</h5>';
 
+    topBarSummary.html(row_start + topTotalSum + row_end);
     dishSummary.html(row_start + selectedDishesPrint + totalSum + row_end);
 
 }
