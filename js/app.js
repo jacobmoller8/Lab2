@@ -27,10 +27,9 @@ $(function () {
 	var hideAllViews = function () {
 		HomeView.hide();
 		DinnerOverviewView.hide();
-		SelectDishView.hide();
+		DishSearchView.hide();
 		DinnerPrintoutView.hide();
 		DishDetailsView.hide();
-		SelectDishAgainView.hide();
 	}
 
 	// TODO: 
@@ -49,7 +48,7 @@ $(function () {
 		// SKER MOBILANPASSNINGEN HÄR?
 		// TYP "If (device == mobile){ mobileNavBarView.show(); }" ELLER NÅGOT I STIL MED DET?
 		SideBarView.show();
-		SelectDishView.show();
+		DishSearchView.show();
 	}
 
 	this.showDishDetailsScreen = function () {
