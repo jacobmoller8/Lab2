@@ -37,15 +37,8 @@ $(function () {
 
 	// TODO: 
 	// - VI MÅSTE LÄGGA TILL show() OCH hide() FUNKTIONER TILL VARJE VIEW
-	// - SKRIVA OM VIEWS:en OVAN, FÖLJANDE VIEWS HAR VI:
-	//		- Mobile Navbar
-	// 		- Home View
-	//		- Side Bar View
-	//		- Dish search View
-	//		- Dish details View
-	//		- Dinner Overview View
-	//		- Dinner Printout View
 
+	
 	// VARJE SCREEN ÄR EN SIDA FRÅN PROTOTYPEN
 	this.showHomeScreen = function(){
 		// I VARJE SCREEN SKA VI VISA DE "VIEWS" SOM ÄR AKTUELLA
