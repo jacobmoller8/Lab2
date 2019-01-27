@@ -1,5 +1,12 @@
 var dinnerPrintoutView = function (container, model) {
 
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
+
     this.container = container;
 
     var numberOfPersons = container.find("#numberOfPersons");

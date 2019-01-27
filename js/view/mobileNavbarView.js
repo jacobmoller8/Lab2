@@ -1,4 +1,12 @@
 var mobileNavbarView = function (container, model) {
+
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
+
     var dishSummary = container.find(".dinnerSummary");
     var topBarSummary = container.find("#topBarSum");
     var row_start = '<div class="row">';

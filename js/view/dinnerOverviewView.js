@@ -1,5 +1,12 @@
 var dinnerOverviewView = function (container, model) {
 
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
+
     this.container = container;
 
     var numberOfPersons = container.find("#numberOfPersons");
@@ -31,5 +38,6 @@ var dinnerOverviewView = function (container, model) {
     returnString = startRow + dishes + rightSide + endRow;
 
     dishesModel.html(returnString);
+
 
 }
