@@ -1,3 +1,6 @@
-var homeController = function (container, model){
-	
+var homeController = function (container, model) {
+
+
+
+
 }

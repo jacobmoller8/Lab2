@@ -1,8 +1,6 @@
 $(function () {
-	//We instantiate our model
-	var model = new DinnerModel();
 
-	// And create the instance of ExampleView
+	var model = new DinnerModel();
 
 	var homeView = new homeView($('#homeView'), model);
 	var homeController = new homeController(homeView, model, this);
@@ -26,27 +24,27 @@ $(function () {
 	var DishDetailsController = new dishDetailsController(DishDetailsView, model, this);
 
 
-	var hideAllViews = function(){
-        homeView.hide();
-        DinnerOverviewView.hide();
-        SelectDishView.hide();
+	var hideAllViews = function () {
+		homeView.hide();
+		DinnerOverviewView.hide();
+		SelectDishView.hide();
 		DinnerPrintoutView.hide();
 		DishDetailsView.hide();
-        SelectDishAgainView.hide();
-    }
+		SelectDishAgainView.hide();
+	}
 
 	// TODO: 
 	// - VI MÅSTE LÄGGA TILL show() OCH hide() FUNKTIONER TILL VARJE VIEW
 
 
 	// VARJE SCREEN ÄR EN SIDA FRÅN PROTOTYPEN
-	this.showHomeScreen = function(){
+	this.showHomeScreen = function () {
 		// I VARJE SCREEN SKA VI VISA DE "VIEWS" SOM ÄR AKTUELLA
-        hideAllViews();
-        homeView.show();
-    }
+		hideAllViews();
+		homeView.show();
+	}
 
-	this.showSelectDishScreen = function(){
+	this.showSelectDishScreen = function () {
 		hideAllViews();
 		// SKER MOBILANPASSNINGEN HÄR?
 		// TYP "If (device == mobile){ mobileNavBarView.show(); }" ELLER NÅGOT I STIL MED DET?
@@ -54,17 +52,17 @@ $(function () {
 		SelectDishView.show();
 	}
 
-	this.showDishDetailsScreen = function(){
+	this.showDishDetailsScreen = function () {
 		hideAllViews();
 		DishDetailsView.show()
 	}
 
-	this.showDinnerOverviewScreen = function(){
+	this.showDinnerOverviewScreen = function () {
 		hideAllViews();
 		dinnerOverviewView.show()
 	}
 
-	this.showDinnerPrintoutScreen = function(){
+	this.showDinnerPrintoutScreen = function () {
 		hideAllViews();
 		dinnerPrintoutView.show()
 	}
