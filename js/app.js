@@ -3,7 +3,6 @@ $(function () {
 	var model = new DinnerModel();
 
 	// And create the instance of ExampleView
-	var exampleView = new ExampleView($("#exampleView"));
 
 	var homeView = new homeView($('#homeView'), model);
 	var homeController = new homeController(homeView, model, this);
