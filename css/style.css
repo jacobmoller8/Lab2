@@ -70,20 +70,13 @@
 
 
 .row{
-	margin: none;;
-
+	margin: none;
 }
 
 .form-row{
 	margin: none;
 }
 
-.leftSideContainer{
-	height: 100%;
-	position: fixed;
-	border: solid;
-	border-width: 2px;
-}
 
 .sideColumnHeader{
 	background-color: grey;
@@ -175,3 +168,10 @@ color: darkred;
 
 }
 
+#sideBarView{
+	display: none;
+	height: 100%;
+	position: fixed;
+	border: solid;
+	border-width: 2px;
+}
