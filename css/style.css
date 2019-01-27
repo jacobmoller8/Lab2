@@ -189,3 +189,11 @@ color: darkred;
 #dishSearchBodyView{
 	display: none;
 }
+
+#dinner_overview{
+	display: none;
+}
+
+#dinner_printout{
+	display: none;
+}
