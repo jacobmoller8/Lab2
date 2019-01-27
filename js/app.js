@@ -2,20 +2,20 @@ $(function () {
 
 	var model = new DinnerModel();
 
-	var homeView = new homeView($('#homeView'), model);
-	var homeController = new homeController(homeView, model, this);
+	var HomeView = new homeView($('#homeView'), model);
+	var HomeController = new homeController(HomeView, model, this);
 
 	var DinnerOverviewView = new dinnerOverviewView($('#dinner_overview'), model);
 	var DinnerOverviewController = new dinnerOverviewController(DinnerOverviewView, model, this);
 
-	var dishSearchView = new dishSearchView($('#select_dish'), model);
-	var dishSearchController = new dishSearchController(dishSearchView, model, this);
+	var DishSearchView = new dishSearchView($('#select_dish'), model);
+	var DishSearchController = new dishSearchController(DishSearchView, model, this);
 
-	var sideBarView = new sideBarView($('sideBarView'), model);
-	var sideBarController = new sideBarController(sideBarView, model, this);
+	var SideBarView = new sideBarView($('sideBarView'), model);
+	var SideBarController = new sideBarController(SideBarView, model, this);
 
-	var mobileNavbarView = new mobileNavbarView($('#navBarView'), model);
-	var mobileNavbarController = new mobileNavbarController(mobileNavbarView, model, this);
+	var MobileNavbarView = new mobileNavbarView($('#navBarView'), model);
+	var MobileNavbarController = new mobileNavbarController(MobileNavbarView, model, this);
 
 	var DinnerPrintoutView = new dinnerPrintoutView($('#dinner_printout'), model);
 	var DinnerPrintoutController = new dinnerPrintoutController(DinnerPrintoutView, model, this);
@@ -25,7 +25,7 @@ $(function () {
 
 
 	var hideAllViews = function () {
-		homeView.hide();
+		HomeView.hide();
 		DinnerOverviewView.hide();
 		SelectDishView.hide();
 		DinnerPrintoutView.hide();
@@ -41,14 +41,14 @@ $(function () {
 	this.showHomeScreen = function () {
 		// I VARJE SCREEN SKA VI VISA DE "VIEWS" SOM ÄR AKTUELLA
 		hideAllViews();
-		homeView.show();
+		HomeView.show();
 	}
 
 	this.showSelectDishScreen = function () {
 		hideAllViews();
 		// SKER MOBILANPASSNINGEN HÄR?
 		// TYP "If (device == mobile){ mobileNavBarView.show(); }" ELLER NÅGOT I STIL MED DET?
-		sideBarView.show();
+		SideBarView.show();
 		SelectDishView.show();
 	}
 
@@ -59,12 +59,12 @@ $(function () {
 
 	this.showDinnerOverviewScreen = function () {
 		hideAllViews();
-		dinnerOverviewView.show()
+		DinnerOverviewView.show()
 	}
 
 	this.showDinnerPrintoutScreen = function () {
 		hideAllViews();
-		dinnerPrintoutView.show()
+		DinnerPrintoutView.show()
 	}
 
 
