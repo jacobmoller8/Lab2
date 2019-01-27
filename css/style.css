@@ -190,6 +190,10 @@ color: darkred;
 	display: none;
 }
 
+#dishDetails{
+	display: none;
+}
+
 #dinner_printout{
 	display: none;
 }

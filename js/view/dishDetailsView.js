@@ -1,12 +1,5 @@
 var dishDetailsView = function (container, model) {
 
-    this.show = function () {
-        container.show();
-    };
-    this.hide = function () {
-        container.hide();
-    };
-
     this.container = container;
     this.model = model;
     var dishView = container.find("#dishDescription");
@@ -45,4 +38,10 @@ var dishDetailsView = function (container, model) {
     dishView.html(row_start + dishDescriptionData + dishIngredientDataStart + dishIngredientData + dishIngredientDataEnd + row_end);
 
 
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
 }

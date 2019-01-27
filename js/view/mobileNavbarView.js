@@ -1,12 +1,5 @@
 var mobileNavbarView = function (container, model) {
 
-    this.show = function () {
-        container.show();
-    };
-    this.hide = function () {
-        container.hide();
-    };
-
     var dishSummary = container.find(".dinnerSummary");
     var topBarSummary = container.find("#topBarSum");
     var row_start = '<div class="row">';
@@ -34,5 +27,12 @@ var mobileNavbarView = function (container, model) {
     topBarSummary.html(row_start + topTotalSum + row_end);
     dishSummary.html(row_start + selectedDishesPrint + totalSum + row_end);
 
+
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
 
 }

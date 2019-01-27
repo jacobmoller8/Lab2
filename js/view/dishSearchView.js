@@ -1,11 +1,5 @@
 var dishSearchView = function (container, model) {
 
-    this.show = function () {
-        container.show();
-    };
-    this.hide = function () {
-        container.hide();
-    };
 
     this.container = container;
 
@@ -32,4 +26,11 @@ var dishSearchView = function (container, model) {
 
     dishSpan.html(row_start + dishesToPrint + row_end);
 
+
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
 }

@@ -28,13 +28,11 @@ $(function () {
 		HomeView.hide();
 		DinnerOverviewView.hide();
 		DishSearchView.hide();
+		SideBarView.hide();
+		MobileNavbarView.hide();
 		DinnerPrintoutView.hide();
 		DishDetailsView.hide();
 	}
-
-	// TODO: 
-	// - VI MÅSTE LÄGGA TILL show() OCH hide() FUNKTIONER TILL VARJE VIEW
-
 
 	// VARJE SCREEN ÄR EN SIDA FRÅN PROTOTYPEN
 	this.showHomeScreen = function () {
@@ -67,7 +65,7 @@ $(function () {
 	}
 
 
-	/**
+	/*
 	 * IMPORTANT: app.js is the only place where you are allowed to
 	 * use the $('someSelector') to search for elements in the whole HTML.
 	 * In other places you should limit the search only to the children 
