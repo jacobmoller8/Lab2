@@ -6,7 +6,7 @@ $(function () {
 	var exampleView = new ExampleView($("#exampleView"));
 
 	var homeView = new homeView($('#homeView'), model);
-	var homeViewController = new homeViewController($(homeView), model);
+	var homeController = new homeController($(homeView), model);
 
 	var DinnerOverviewView = new dinnerOverviewView($('#dinner_overview'), model);
 	var DinnerOverviewController = new dinnerOverviewController($(DinnerOverviewView), model);
