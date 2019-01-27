@@ -124,41 +124,46 @@
 		</div>
 	</div>
 
-	<!-- DISH SEARCH NAVIGATION VIEW -->
-	<div class="container-fluid col offset-sm-3 offset-lg-2 col-sm-9 col-lg-10" id="dishSearchNavView">
-		<h4>FIND A DISH</h4>
+	<!-- DISH SEARCH VIEW-->
+	<div id="selectDishView">
+		<div class="container-fluid col offset-sm-3 offset-lg-2 col-sm-9 col-lg-10" id="dishSearchNavView">
+			<h4>FIND A DISH</h4>
 
-		<form>
-			<div class="form-row">
-				<div class="form-group col-5">
-					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter key words">
+			<form>
+				<div class="form-row">
+					<div class="form-group col-5">
+						<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter key words">
+					</div>
+					<div class="form-group col-5">
+						<select class="form-control" id="exampleFormControlSelect1">
+							<option>All</option>
+							<option>Main Course</option>
+							<option>Side Dish</option>
+							<option>Dessert</option>
+							<option>Appetizer</option>
+							<option>...</option>
+						</select>
+					</div>
+					<div class="form-group col-2">
+						<button type="button" class="btn btn-secondary confirmDinnerButton">Search</button>
+					</div>
 				</div>
-				<div class="form-group col-5">
-					<select class="form-control" id="exampleFormControlSelect1">
-						<option>All</option>
-						<option>Main Course</option>
-						<option>Side Dish</option>
-						<option>Dessert</option>
-						<option>Appetizer</option>
-						<option>...</option>
-					</select>
-				</div>
-				<div class="form-group col-2">
-					<button type="button" class="btn btn-secondary confirmDinnerButton">Search</button>
-				</div>
-			</div>
-		</form>
-	</div>
+			</form>
+		</div>
 
-	<!-- DISH SEARCH BODY VIEW -->
-	<div id="select_dish">
 		<div class="container-fluid offset-sm-3 offset-lg-2 col-7 col-sm-9 col-lg-10" id="dishSearchBodyView">
 			<div id="dishesSpan"> </div>
 		</div>
 	</div>
-	
-	<!-- DISH DETAILS VIEW-->
 
+
+	<!-- DISH DETAILS VIEW-->
+	<div id="dishDetailsView">
+		<div id="dishDetails" class="container-fluid col offset-sm-3 offset-lg-2 col-sm-9 col-lg-10">
+			<div id="dishDescription"></div>
+		</div>
+	</div>
+	
 	<!-- CHECK OUT VIEW -->
 
 	<!-- PRINT OUT VIEW -->

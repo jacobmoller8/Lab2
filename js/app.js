@@ -14,7 +14,7 @@ $(function () {
 	var DinnerPrintoutView = new dinnerPrintoutView($('#dinner_printout'), model);
 	var DinnerPrintoutController = new dinnerPrintoutController($(DinnerPrintoutView), model);
 
-	var DishDetailsView = new dishDetailsView($('#dish_details'), model);
+	var DishDetailsView = new dishDetailsView($('#dishDetailsView'), model);
 	var DishDetailsController = new dishDetailsController($(DishDetailsView), model);
 
 	var SelectDishAgainView = new selectDishAgainView($('#select_dish_view'), model);
