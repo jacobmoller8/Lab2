@@ -174,4 +174,17 @@ color: darkred;
 	position: fixed;
 	border: solid;
 	border-width: 2px;
+	position: absolute;
+}
+
+#navBarView{
+	display: none;
+}
+
+#dishSearchNavView{
+	display: none;
+}
+
+#dishSearchBodyView{
+	display: none;
 }

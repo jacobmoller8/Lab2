@@ -20,6 +20,46 @@
 		<h1 id="headerTitle">Dinner Planner Te</h1>
 	</div>
 
+	<!-- MOBILE NAV BAR VIEW -->
+	<nav class="navbar navbar-light bg-light" id="navBarView">
+		<a class="navbar-brand" href="#"> My Dinner</a>
+		<button class="navbar-toggler mobileNavBtn" type="button" data-toggle="collapse" data-target="#navbarNav"
+		 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<div class="row">
+				<div class="container-fluid col sideTopSection">
+					<form action="#">
+						<div class="form-group row">
+							<label class="col-4" for="peopleSelector">People:</label>
+							<input class="form-control col-4" id="peopleSelector" type="number" name="people" step="1">
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="container-fluid col sideColumnHeader">
+					<div class="row">
+						<p class="sideDishName col-6">Dish Name</p>
+						<p class="sideCost col-6">Cost</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="container-fluid col sideBottomSection">
+					<div class="row">
+						<p class="sideDishName col-6" id="selectedDishName"></p>
+						<p class="sideCost col-6" id="selectedDishCost"></p>
+					</div>
+					<button type="button" class="btn btn-secondary confirmDinnerButton">Confirm Dinner</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+
 	<!-- HOME -->
 	<div id="home" class="container">
 		<div id="homeScreen" class="row">
@@ -83,12 +123,40 @@
 			</div>
 		</div>
 	</div>
-	<!-- NAV BAR VIEW -->
 
-	<!-- SEARCH NAVIGATION VIEW -->
+	<!-- DISH SEARCH NAVIGATION VIEW -->
+	<div class="container-fluid col offset-sm-3 offset-lg-2 col-sm-9 col-lg-10" id="dishSearchNavView">
+		<h4>FIND A DISH</h4>
 
-	<!-- SEARCH BODY VIEW -->
+		<form>
+			<div class="form-row">
+				<div class="form-group col-5">
+					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter key words">
+				</div>
+				<div class="form-group col-5">
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>All</option>
+						<option>Main Course</option>
+						<option>Side Dish</option>
+						<option>Dessert</option>
+						<option>Appetizer</option>
+						<option>...</option>
+					</select>
+				</div>
+				<div class="form-group col-2">
+					<button type="button" class="btn btn-secondary confirmDinnerButton">Search</button>
+				</div>
+			</div>
+		</form>
+	</div>
 
+	<!-- DISH SEARCH BODY VIEW -->
+	<div id="select_dish">
+		<div class="container-fluid offset-sm-3 offset-lg-2 col-7 col-sm-9 col-lg-10" id="dishSearchBodyView">
+			<div id="dishesSpan"> </div>
+		</div>
+	</div>
+	
 	<!-- DISH DETAILS VIEW-->
 
 	<!-- CHECK OUT VIEW -->
