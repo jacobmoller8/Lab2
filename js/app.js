@@ -51,25 +51,17 @@ $(function () {
 
 	this.showDishDetailsScreen = function () {
 		hideAllViews();
-		DishDetailsView.show()
+		DishDetailsView.show();
 	}
 
 	this.showDinnerOverviewScreen = function () {
 		hideAllViews();
-		DinnerOverviewView.show()
+		DinnerOverviewView.show();
 	}
 
 	this.showDinnerPrintoutScreen = function () {
 		hideAllViews();
-		DinnerPrintoutView.show()
+		DinnerPrintoutView.show();
 	}
-
-
-	/*
-	 * IMPORTANT: app.js is the only place where you are allowed to
-	 * use the $('someSelector') to search for elements in the whole HTML.
-	 * In other places you should limit the search only to the children 
-	 * of the specific view you're working with (see exampleView.js).
-	 */
 
 });
