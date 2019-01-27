@@ -10,8 +10,14 @@ $(function () {
 	var DinnerOverviewView = new dinnerOverviewView($('#dinner_overview'), model);
 	var DinnerOverviewController = new dinnerOverviewController(DinnerOverviewView, model, this);
 
-	var SelectDishView = new selectDishView($('#select_dish'), model);
-	var SelectDishController = new selectDishController(SelectDishView, model, this);
+	var dishSearchView = new dishSearchView($('#select_dish'), model);
+	var dishSearchController = new dishSearchController(dishSearchView, model, this);
+
+	var sideBarView = new sideBarView($('sideBarView'), model);
+	var sideBarController = new sideBarController(sideBarView, model, this);
+
+	var mobileNavbarView = new mobileNavbarView($('#navBarView'), model);
+	var mobileNavbarController = new mobileNavbarController(mobileNavbarView, model, this);
 
 	var DinnerPrintoutView = new dinnerPrintoutView($('#dinner_printout'), model);
 	var DinnerPrintoutController = new dinnerPrintoutController(DinnerPrintoutView, model, this);
@@ -19,8 +25,6 @@ $(function () {
 	var DishDetailsView = new dishDetailsView($('#dishDetailsView'), model);
 	var DishDetailsController = new dishDetailsController(DishDetailsView, model, this);
 
-	var SelectDishAgainView = new selectDishAgainView($('#select_dish_view'), model);
-	var SelectDishAgainController = new selectDishAgainController(SelectDishAgainView, model, this);
 
 	var hideAllViews = function(){
         homeView.hide();
