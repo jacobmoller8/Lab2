@@ -7,10 +7,7 @@
     font-size: 60px;
     font-style: bold;
 }
-#homeView {
-    text-align: center;
-    margin-top: 60px;
-}
+
 #newDinnerButton {
     margin-top: 60px;
     font-size: 20px;
@@ -170,10 +167,42 @@ color: darkred;
 }
 
 #sideBarView{
+	display: none;
 	height: 100%;
 	position: fixed;
 	border: solid;
 	border-width: 2px;
 	position: absolute;
 }
+
+#homeView {
+	display: block;
+	text-align: center;
+	margin-top: 60px;
+}
+
+#navBarView{
+	display: none;
+}
+
+
+#selectDishView{
+	display: none;
+}
+
+#dishDetailsView{
+	display: none;
+}
+
+#dinner_overview{
+	display: none;
+}
+
+#dinner_printout{
+	display: none;
+}
+
+
+
+
 

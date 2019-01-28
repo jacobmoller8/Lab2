@@ -8,10 +8,10 @@ $(function () {
 	var DinnerOverviewView = new dinnerOverviewView($('#dinner_overview'), model);
 	var DinnerOverviewController = new dinnerOverviewController(DinnerOverviewView, model, this);
 
-	var DishSearchView = new dishSearchView($('#select_dish'), model);
+	var DishSearchView = new dishSearchView($('#selectDishView'), model);
 	var DishSearchController = new dishSearchController(DishSearchView, model, this);
 
-	var SideBarView = new sideBarView($('sideBarView'), model);
+	var SideBarView = new sideBarView($('#sideBarView'), model);
 	var SideBarController = new sideBarController(SideBarView, model, this);
 
 	var MobileNavbarView = new mobileNavbarView($('#navBarView'), model);
@@ -33,8 +33,7 @@ $(function () {
 		DinnerPrintoutView.hide();
 		DishDetailsView.hide();
 	}
-
-	hideAllViews();
+	
 
 	// VARJE SCREEN ÄR EN SIDA FRÅN PROTOTYPEN
 	this.showHomeScreen = function () {
@@ -50,6 +49,7 @@ $(function () {
 		SideBarView.show();
 		DishSearchView.show();
 	}
+
 
 	this.showDishDetailsScreen = function () {
 		hideAllViews();
