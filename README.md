@@ -9,25 +9,25 @@ Todo:
 
 Global:
 - Implement Observers
-- Image Responsiveness  (KLAR)
-- Navbar (Side or Mobile)   (KLAR)
+- Image Responsiveness  (DONE)
+- Navbar (Side or Mobile)   (DONE)
 
 Local:
 
 dishSearchView:
 - Navigation on Dishes (On click on Dish)
 - Keywords on Select Dish (Search Button)
-- Add dropdown Types (from model)
+- Add dropdown Types (from model) (DOING)
 
 dishDetails:
 - Navigation "Back to search button"
 - Add to Menu button
 
 dinnerOverview:
-- Navigation on Back Buttons    (KLAR)
+- Navigation on Back Buttons    (DONE)
 
 dinnerPrintout:
-- Navigation on Back Buttons    (KLAR)
+- Navigation on Back Buttons    (DONE)
 
 
 
