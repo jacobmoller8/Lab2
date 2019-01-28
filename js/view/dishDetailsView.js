@@ -16,7 +16,7 @@ var dishDetailsView = function (container, model) {
     var row_end = '</div>';
 
     dishDescriptionData = '<div class="container-fluid col-12 col-sm-6 dishDesc">' +
-        '<div class="container-fluid col-12 col-sm-10 dishDescImageCont"> <h3>' + currentDish.name + '</h3> <img src="images/' + currentDish.image + '" class="img-fluid dishDescImage" id="dishDescImage" alt=""> </img>'
+        '<div class="container-fluid col-12 col-sm-10 dishDescImageCont"> <h3>' + currentDish.name + '</h3> <img src="images/' + currentDish.image + '" width="100%" class="img-fluid dishDescImage" id="dishDescImage" alt="Responsive image"> </img>'
         + '<p id="dishDescText">' + currentDish.description + '</p>'
         + '<button class="btn btn-secondary"> Back to search </button>'
         + '</div> </div>';

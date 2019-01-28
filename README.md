@@ -9,8 +9,8 @@ Todo:
 
 Global:
 - Implement Observers
-- Image Responsiveness
-- Navbar (Side or Mobile)  (KLAR)
+- Image Responsiveness  (KLAR)
+- Navbar (Side or Mobile)   (KLAR)
 
 Local:
 
@@ -24,10 +24,10 @@ dishDetails:
 - Add to Menu button
 
 dinnerOverview:
-- Navigation on Back Buttons (KLAR)
+- Navigation on Back Buttons    (KLAR)
 
 dinnerPrintout:
-- Navigation on Back Buttons (KLAR)
+- Navigation on Back Buttons    (KLAR)
 
 
 
