@@ -29,7 +29,7 @@ var sideBarView = function (container, model) {
 
 
     this.show = function () {
-        container.show();
+				container.getElementById("#sideBarView").style.display = block;
     };
     this.hide = function () {
         container.hide();

@@ -8,7 +8,6 @@
     font-style: bold;
 }
 #homeView {
-		display: block;
     text-align: center;
     margin-top: 60px;
 }
@@ -171,7 +170,6 @@ color: darkred;
 }
 
 #sideBarView{
-	display: none;
 	height: 100%;
 	position: fixed;
 	border: solid;
@@ -179,21 +177,3 @@ color: darkred;
 	position: absolute;
 }
 
-#navBarView{
-	display: none;
-}
-
-#selectDishView{
-    display: none;
-}
-#dinner_overview{
-	display: none;
-}
-
-#dishDetails{
-	display: none;
-}
-
-#dinner_printout{
-	display: none;
-}
