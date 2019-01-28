@@ -28,6 +28,8 @@ var mobileNavbarView = function (container, model) {
     dishSummary.html(row_start + selectedDishesPrint + totalSum + row_end);
 
 
+    this.navBarConfirmBtn = container.find('#navBarConfirmBtn');
+
     this.show = function () {
         container.show();
     };

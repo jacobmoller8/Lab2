@@ -33,7 +33,7 @@ $(function () {
 		DinnerPrintoutView.hide();
 		DishDetailsView.hide();
 	}
-	
+
 
 	// VARJE SCREEN ÄR EN SIDA FRÅN PROTOTYPEN
 	this.showHomeScreen = function () {
@@ -44,9 +44,12 @@ $(function () {
 
 	this.showSelectDishScreen = function () {
 		hideAllViews();
-		// SKER MOBILANPASSNINGEN HÄR?
-		// TYP "If (device == mobile){ mobileNavBarView.show(); }" ELLER NÅGOT I STIL MED DET?
-		SideBarView.show();
+		var screenSize = $(window).width();
+		if (screenSize >= 978) {
+			SideBarView.show();
+		} else {
+			MobileNavbarView.show();
+		}
 		DishSearchView.show();
 	}
 
