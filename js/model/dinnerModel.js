@@ -11,12 +11,12 @@ var DinnerModel = function () {
 
 	// Adding observer
 	this.addObserver = function (observer) {
-		this.observers.push(observer);
+		observers.push(observer);
 	}
 	// Notify observer
 	this.notifyObservers = function (changeDetails) {
-		for (var i = 0; i < this.observers.length; i++) {
-			this.observers[i].update(this, changeDetails);
+		for (var i = 0; i < observers.length; i++) {
+			observers[i].update(changeDetails);
 		}
 	}
 
@@ -77,6 +77,11 @@ var DinnerModel = function () {
 		while ((i = menu.indexOf(dish)) > -1) {
 			menu.splice(i, 1);
 		}
+	}
+
+	// Get the all the different dish types for dropdown selector
+	this.getAllDishTypes = function () {
+
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
