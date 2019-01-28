@@ -24,10 +24,10 @@ dishDetails:
 - Add to Menu button
 
 dinnerOverview:
-- Navigation on Back Buttons
+- Navigation on Back Buttons (KLAR)
 
 dinnerPrintout:
-- Navigation on Back Buttons
+- Navigation on Back Buttons (KLAR)
 
 
 

@@ -36,6 +36,8 @@ var dinnerPrintoutView = function (container, model) {
 
     dishesModel.html(dishes);
 
+    this.goBackButton = container.find('#goBackButton');
+
     this.show = function () {
         container.show();
     };

@@ -34,6 +34,7 @@ var dinnerOverviewView = function (container, model) {
 
 
 	this.printRecipeButton = container.find('#printRecipeButton');
+	this.goBackButton = container.find('#goBackButton');
 
 	this.show = function () {
 		container.show();
