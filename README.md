@@ -10,7 +10,7 @@ Todo:
 Global:
 - Implement Observers
 - Image Responsiveness
-- Navbar (Side or Mobile) 
+- Navbar (Side or Mobile)  (KLAR)
 
 Local:
 
