@@ -8,7 +8,7 @@ CMETE16
 Todo:
 
 Global:
-- Implement Observers
+- Implement Observers 
 - Image Responsiveness  (DONE)
 - Navbar (Side or Mobile)   (DONE)
 
@@ -16,8 +16,8 @@ Local:
 
 dishSearchView:
 - Navigation on Dishes (On click on Dish)
-- Keywords on Select Dish (Search Button) (DOING)
-- Add dropdown Types (from model) (DOING)
+- Keywords on Select Dish (Search Button) (DONE)
+- Add dropdown Types (from model) (DONE)
 
 dishDetails:
 - Navigation "Back to search button"

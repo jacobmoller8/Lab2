@@ -29,7 +29,12 @@ var dishSearchView = function (container, model) {
         var filterValue = document.getElementById('filterInput').value;
         var typeSelector = document.getElementById('typeSelect');
         var typeValue = typeSelector[typeSelector.selectedIndex].value;
-        var allDishes = model.getAllDishes(String(typeValue), String(filterValue));
+
+        if (typeValue == "all") {
+            var allDishes = allStarterDishes.concat(allMainDishes).concat(allDesertDishes);
+        } else {
+            var allDishes = model.getAllDishes(String(typeValue), String(filterValue));
+        }
         getDishesHTML(allDishes);
     }
 
