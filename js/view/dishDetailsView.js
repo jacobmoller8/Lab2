@@ -34,6 +34,14 @@ var dishDetailsView = function (container, model) {
     }
 
     dishIngredientDataEnd = '</tbody> </table> <button class="btn btn-secondary"> Add to menu </button> </div>';
-    
+
     dishView.html(row_start + dishDescriptionData + dishIngredientDataStart + dishIngredientData + dishIngredientDataEnd + row_end);
+
+
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
 }

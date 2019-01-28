@@ -32,4 +32,12 @@ var dinnerOverviewView = function (container, model) {
 
     dishesModel.html(returnString);
 
+
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
+
 }

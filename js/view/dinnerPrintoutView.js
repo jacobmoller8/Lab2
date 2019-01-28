@@ -36,4 +36,11 @@ var dinnerPrintoutView = function (container, model) {
 
     dishesModel.html(dishes);
 
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
+
 }

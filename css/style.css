@@ -182,15 +182,14 @@ color: darkred;
 	display: none;
 }
 
-#dishSearchNavView{
-	display: none;
+#selectDishView{
+    display: none;
 }
-
-#dishSearchBodyView{
-	display: none;
-}
-
 #dinner_overview{
+	display: none;
+}
+
+#dishDetails{
 	display: none;
 }
 
