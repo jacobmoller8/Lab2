@@ -35,6 +35,14 @@ var DinnerModel = function () {
 		return selectedDish;
 	}
 
+	this.setSelectedDish = function (name) {
+		for (key in dishes) {
+			if (dishes[key].name == name) {
+				selectedDish = dishes[key].id;
+			}
+		}
+	}
+
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function () {
 		return menu;

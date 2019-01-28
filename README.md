@@ -16,6 +16,7 @@ Local:
 
 dishSearchView:
 - Navigation on Dishes (On click on Dish)
+- Started but far from finished, additional reading must be done.
 - Keywords on Select Dish (Search Button) (DONE)
 - Add dropdown Types (from model) (DONE)
 

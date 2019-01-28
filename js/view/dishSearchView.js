@@ -1,6 +1,8 @@
 var dishSearchView = function (container, model) {
-
+    this.container = container;
     this.searchDishButton = container.find('#searchDishButton');
+    this.dishesBody = container.find('#dishSearchBody');
+
     var dishSpan = container.find("#dishesSpan");
     var allStarterDishes = model.getAllDishes("starter");
     var allMainDishes = model.getAllDishes("main dish");
@@ -18,7 +20,6 @@ var dishSearchView = function (container, model) {
         var dishesToPrint = "";
         for (var i = 0; i < allDishes.length; i++) {
             var dish = allDishes[i];
-            console.log(dish.image);
             dishesToPrint += `
                 <div class="container-fluid col-12 col-lg-2 col-md-3 col-sm-4 imgCont">
                     <img src="images/${dish.image}" class="img-fluid foodPic" alt="Responsive image"/>
