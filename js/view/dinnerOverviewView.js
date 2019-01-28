@@ -16,7 +16,7 @@ var dinnerOverviewView = function (container, model) {
 	for (var i = 0; i < menu.length; i++) {
 		var dish = model.getDish(menu[i]);
 		dishes += '<div class="col-md-2">' +
-			'<img src="images/' + dish.image + '" width="100%" height="150px" class="mt-4">' +
+			'<img src="images/' + dish.image + '" width="100%" class="mt-4 img-fluid" alt="Responsive image">' +
 			'<button class="btn btn-default btn-block bg-light border-dark">' + dish.name + '</button>' +
 			'<h4 id="dishPrice">' + model.getDishPrice(dish).toFixed(2) + ' SEK</h4>' +
 			'</div>'

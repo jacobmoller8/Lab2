@@ -19,7 +19,7 @@ var dinnerPrintoutView = function (container, model) {
             '<div class="col-md-5">' +
             '<div class="row">' +
             '<div class="col-md-4">' +
-            '<img src="images/' + dish.image + '" width="100%" height="150px">' +
+            '<img src="images/' + dish.image + '"width="100%" class="mt-4 img-fluid" alt="Responsive image">' +
             '</div>' +
             '<div class="col-md-auto">' +
             '<h2>' + dish.name + '</h2>' +
