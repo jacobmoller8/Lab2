@@ -11,7 +11,6 @@ var dishSearchView = function (container, model) {
         var row_start = "<div class=" + 'row justify-content-start' + ">";
         var dishesToPrint = getDishHTML();
         var row_end = "</div>";
-
         dishSpan.html(row_start + dishesToPrint + row_end);
     }
 
@@ -26,16 +25,14 @@ var dishSearchView = function (container, model) {
         return dishesToPrint;
     }
 
-    var searchUpdate = function () {
-        console.log("hej");
-    }
+    this.searchUpdate = function () {
+        var filterValue = document.getElementById('filterInput').value;
+        console.log(filterValue);
 
-    //var filterValueField = container.find("#filterInput");
-    //var filterValue = filterValueField.options[filterValueField.selectedIndex].value;
-    //var typeValueField = container.find("#typeSelect");
-    //var typeValue = typeValueField.options[typeValueField.selectedIndex].value;
-    //console.log(filterValue);
-    //console.log(typeValue);
+        var typeSelector = document.getElementById('typeSelect');
+        var typeValue = typeSelector[typeSelector.selectedIndex].value;
+        console.log(typeValue);
+    }
 
     //var allDishes = allStarterDishes.concat(allMainDishes).concat(allDesertDishes);
 
