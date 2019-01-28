@@ -16,7 +16,7 @@ Local:
 
 dishSearchView:
 - Navigation on Dishes (On click on Dish)
-- Keywords on Select Dish (Search Button)
+- Keywords on Select Dish (Search Button) (DOING)
 - Add dropdown Types (from model) (DOING)
 
 dishDetails:

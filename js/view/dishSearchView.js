@@ -1,30 +1,47 @@
 var dishSearchView = function (container, model) {
 
-
-    this.container = container;
-
+    this.searchDishButton = container.find('#searchDishButton');
     var dishSpan = container.find("#dishesSpan");
-
     var allStarterDishes = model.getAllDishes("starter");
     var allMainDishes = model.getAllDishes("main dish");
     var allDesertDishes = model.getAllDishes("dessert");
 
-    var allDishes = allStarterDishes.concat(allMainDishes).concat(allDesertDishes);
+    var getDishesHTML = function () {
 
-    var dishesToPrint = "";
+        var row_start = "<div class=" + 'row justify-content-start' + ">";
+        var dishesToPrint = getDishHTML();
+        var row_end = "</div>";
 
-    var row_start = "<div class=" + 'row justify-content-start' + ">";
-    var row_end = "</div>";
-
-
-    for (var i = 0; i < allDishes.length; i++) {
-        var dish = allDishes[i];
-        dishesToPrint += '<div class="container-fluid col-12 col-lg-3 col-md-3 col-sm-4 imgCont">' +
-            '<img src="images/' + dish.image + '" width="100%" class="img-fluid foodPic" alt="Responsive image"/>' +
-            '<button class="btn btn-secondary dishBtn">' + dish.name + '</button>' + '</div>'
+        dishSpan.html(row_start + dishesToPrint + row_end);
     }
 
-    dishSpan.html(row_start + dishesToPrint + row_end);
+    var getDishHTML = function () {
+        var dishesToPrint = "";
+        for (var i = 0; i < allDishes.length; i++) {
+            var dish = allDishes[i];
+            dishesToPrint += '<div class="container-fluid col-12 col-lg-3 col-md-3 col-sm-4 imgCont">' +
+                '<img src="images/' + dish.image + '" width="100%" class="img-fluid foodPic" alt="Responsive image"/>' +
+                '<button class="btn btn-secondary dishBtn">' + dish.name + '</button>' + '</div>'
+        }
+        return dishesToPrint;
+    }
+
+    var searchUpdate = function () {
+        console.log("hej");
+    }
+
+    //var filterValueField = container.find("#filterInput");
+    //var filterValue = filterValueField.options[filterValueField.selectedIndex].value;
+    //var typeValueField = container.find("#typeSelect");
+    //var typeValue = typeValueField.options[typeValueField.selectedIndex].value;
+    //console.log(filterValue);
+    //console.log(typeValue);
+
+    //var allDishes = allStarterDishes.concat(allMainDishes).concat(allDesertDishes);
+
+    var allDishes = model.getAllDishes("starter");
+
+    getDishesHTML();
 
 
     this.show = function () {
