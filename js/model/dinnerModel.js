@@ -4,9 +4,21 @@ var DinnerModel = function () {
 	//TODO Lab 1 implement the data structure that will hold number of guest
 	// and selected dishes for the dinner menu
 
+	var observers = [];
 	var numberOfGuests = 3;
 	var menu = [1, 103, 202];
 	var selectedDish = 100;
+
+	// Adding observer
+	this.addObserver = function (observer) {
+		this.observers.push(observer);
+	}
+	// Notify observer
+	this.notifyObservers = function (changeDetails) {
+		for (var i = 0; i < this.observers.length; i++) {
+			this.observers[i].update(this, changeDetails);
+		}
+	}
 
 	this.setNumberOfGuests = function (num) {
 		if (num < 1) return;
