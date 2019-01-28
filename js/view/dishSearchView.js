@@ -6,15 +6,15 @@ var dishSearchView = function (container, model) {
     var allMainDishes = model.getAllDishes("main dish");
     var allDesertDishes = model.getAllDishes("dessert");
 
-    var getDishesHTML = function () {
+    var getDishesHTML = function (allDishes) {
 
         var row_start = "<div class=" + 'row justify-content-start' + ">";
-        var dishesToPrint = getDishHTML();
+        var dishesToPrint = getDishHTML(allDishes);
         var row_end = "</div>";
         dishSpan.html(row_start + dishesToPrint + row_end);
     }
 
-    var getDishHTML = function () {
+    var getDishHTML = function (allDishes) {
         var dishesToPrint = "";
         for (var i = 0; i < allDishes.length; i++) {
             var dish = allDishes[i];
@@ -27,18 +27,17 @@ var dishSearchView = function (container, model) {
 
     this.searchUpdate = function () {
         var filterValue = document.getElementById('filterInput').value;
-        console.log(filterValue);
-
         var typeSelector = document.getElementById('typeSelect');
         var typeValue = typeSelector[typeSelector.selectedIndex].value;
-        console.log(typeValue);
+        var allDishes = model.getAllDishes(String(typeValue), String(filterValue));
+        getDishesHTML(allDishes);
     }
 
     //var allDishes = allStarterDishes.concat(allMainDishes).concat(allDesertDishes);
 
     var allDishes = model.getAllDishes("starter");
 
-    getDishesHTML();
+    getDishesHTML(allDishes);
 
 
     this.show = function () {
