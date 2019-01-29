@@ -87,11 +87,8 @@ var DinnerModel = function () {
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function (id) {
-		// TODO: FIXA KÖN
-		var i;
-		while ((i = menu.indexOf(id)) > -1) {
-			menu.splice(i, 1);
-		}
+		var index = menu.indexOf(id);
+		menu.splice(index, 1);
 		notifyObservers();
 	}
 

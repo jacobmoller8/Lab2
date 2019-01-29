@@ -2,6 +2,7 @@ var mobileNavbarController = function (view, model, app) {
 	this.update = function () {
 		confirmBtnClick();
 		numberOfGuestsClicked();
+		removeDishClick();
 	}
 
 	var confirmBtnClick = function () {
@@ -12,7 +13,7 @@ var mobileNavbarController = function (view, model, app) {
 
 	var numberOfGuestsClicked = function () {
 		var inputSelector = view.container.find("#mobilePeopleSelector");
-		inputSelector.click(function () {
+		inputSelector.off().click(function () {
 			var nrOfPeople = inputSelector[0].value;
 			model.setNumberOfGuests(parseInt(nrOfPeople));
 		})
@@ -20,6 +21,16 @@ var mobileNavbarController = function (view, model, app) {
 		inputSelector[0].value = model.getNumberOfGuests();
 
 	}
+
+	var removeDishClick = function () {
+        view.container.find(".sideBarDishItem").click(function () {
+			console.log(this.id);
+            model.removeDishFromMenu(parseInt(this.id));
+		})
+	}
+
+	model.addObserver(this);
+	removeDishClick();
 	confirmBtnClick();
 	numberOfGuestsClicked();
 
