@@ -1,5 +1,5 @@
 var dishDetailsView = function (container, model) {
-
+	this.container = container;
 	model.addObserver(this);
 	var backToSearchBtn = "";
 	
@@ -9,7 +9,6 @@ var dishDetailsView = function (container, model) {
 	}
 
 	var loadView = function (currentDishId) {
-		console.log(`dishDetailsView Loaded on dish ${currentDishId}!, efter denna load ska jag kunna lägga till knappfunktionen..`);
 		this.container = container;
 		this.model = model;
 		var dishView = container.find("#dishDescription");

@@ -10,7 +10,6 @@ var dishSearchController = function (view, model, app) {
 
     var ImageClick = function () {
         view.container.find(".dishBtn").click(function () {
-            console.log("hej")
             model.setSelectedDishId(this.id);
             app.showDishDetailsScreen();
         })

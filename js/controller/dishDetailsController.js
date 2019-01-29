@@ -1,18 +1,32 @@
 var dishDetailsController = function (view, model, app) {
-	console.log("dishDetails Controller Loaded!");
+	var viewLoad = view.loadView;
+	console.log("reached stage 1");
 
-	view.onload = console.log("view file loaded, här hade jag velat lägga till knappfunktionen");
-	//view.backToSearchBtn.click(clickEvt);
-
+    this.update = function () {
+		console.log("reached stage 2")
+		viewLoad.onload = clickEvt();
+		
+	}
 
 	var clickEvt = function () {
-		view.container.find(".dishBtn").click(function () {
+		console.log("reached stage 3");
+		var backToSearchButton = view.container.find("#backToSearchBtn");
+        backToSearchButton.click(function () {
+            app.showSelectDishScreen()})
+		};
+
+	clickEvt();
+	
+    }
+
+	/* 
+	var clickEvt = function () {
+		view.container.find("#backToSearchBtn").click(function () {
 			model.setSelectedDishId(this.id);
 			app.showDishDetailsScreen();
 		})
 		console.log("clicked!");
 		app.showSelectDishScreen();
 	}
+	*/
 
-
-}
