@@ -80,8 +80,9 @@ margin: auto;
 padding: none;
 }
 .mobileNavBtn{
-float: right;
+    float: right;
 }
+
 .dishDescImage{
 width: 100%;
 }
@@ -136,8 +137,10 @@ margin-left:10px;
 }
 #topBarSumText{
 padding-top:10px;
+padding-left: 25px;
 color: darkred;
 }
+
 #sideBarView{
 	display: none;
 	height: 100%;

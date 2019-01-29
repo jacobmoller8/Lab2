@@ -17,13 +17,13 @@ Local:
 dishSearchView:
 - Navigation on Dish click (ALMOST DONE)
 
-- Changing Number of guests 
+- Changing Number of guests (DONE)
 - Keywords on Select Dish (Search Button) (DONE)
 - Add dropdown Types (from model) (DONE)
 
 dishDetails:
 - Navigation "Back to search button" (DONE)
-- Add to Menu button
+- Add to Menu button (DONE)
 
 dinnerOverview:
 - Navigation on Back Buttons    (DONE)
@@ -31,6 +31,9 @@ dinnerOverview:
 dinnerPrintout:
 - Navigation on Back Buttons    (DONE)
 
+mobileNavBar:
+- Changing Number of guests
+- Fix layout issue of header
 
 
 
