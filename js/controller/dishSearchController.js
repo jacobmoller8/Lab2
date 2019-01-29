@@ -5,16 +5,16 @@ var dishSearchController = function (view, model, app) {
     });
 
     this.update = function () {
-        ImageClick();
+        dishClick();
     }
 
-    var ImageClick = function () {
+    var dishClick = function () {
         view.container.find(".dishBtn").click(function () {
             console.log("test");
             model.setSelectedDishId(this.id);
             app.showDishDetailsScreen();
         })
     }
-    ImageClick();
+    dishClick();
     model.addObserver(this);
 }

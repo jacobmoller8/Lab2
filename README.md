@@ -8,7 +8,7 @@ CMETE16
 Todo:
 
 Global:
-- Implement Observers
+- Implement Observers 
 - Image Responsiveness  (DONE)
 - Navbar (Side or Mobile)   (DONE)
 
