@@ -22,7 +22,7 @@ Happy Coding!
 ----------------------------
 
 Global:
-- Implement Observers (UNDERSTAND IT NOW )
+- Implement Observers
 - Image Responsiveness  (DONE)
 - Navbar (Side or Mobile)   (DONE)
 
@@ -36,7 +36,7 @@ dishSearchView:
 - Add dropdown Types (from model) (DONE)
 
 dishDetails:
-- Navigation "Back to search button"
+- Navigation "Back to search button" (DONE)
 - Add to Menu button
 
 dinnerOverview:
