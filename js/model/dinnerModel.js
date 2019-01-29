@@ -4,9 +4,8 @@ var DinnerModel = function () {
 
 	var observers = [];
 	console.log(observers);
-	var numberOfGuests = 3;
+	var numberOfGuests = 4;
 	var menu = [1, 103, 202];
-	console.log(menu);
 	var selectedDish = 100;
 
 	// Adding observer

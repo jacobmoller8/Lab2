@@ -11,7 +11,6 @@ var dishSearchController = function (view, model, app) {
 
     var dishClick = function () {
         view.container.find(".dishBtn").click(function () {
-            console.log("test");
             model.setSelectedDishId(this.id);
             app.showDishDetailsScreen();
         })

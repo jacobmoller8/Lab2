@@ -11,7 +11,6 @@ var dishDetailsController = function (view, model, app) {
 	}
 
 	var addToMenuClick = function (){
-		console.log(model.getFullMenu());
 		view.container.find("#addToMenuBtn").click(function () {
 		model.addDishToMenu(parseInt(model.getSelectedDish()));
 		app.showSelectDishScreen();
