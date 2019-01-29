@@ -1,16 +1,32 @@
 var dishSearchView = function (container, model) {
 
+    model.addObserver(this);
 
     this.container = container;
     this.searchDishButton = container.find('#searchDishButton');
-    this.dishesBody = container.find('#dishSearchBody');
-
-
-
     var dishSpan = container.find("#dishesSpan");
-    var allStarterDishes = model.getAllDishes("starter");
-    var allMainDishes = model.getAllDishes("main dish");
-    var allDesertDishes = model.getAllDishes("dessert");
+
+
+    this.update = function () {
+        this.searchUpdate();
+    }
+
+    this.searchUpdate = function () {
+        var filterValue = document.getElementById('filterInput').value;
+        var typeSelector = document.getElementById('typeSelect');
+        var typeValue = typeSelector[typeSelector.selectedIndex].value;
+
+        var allStarterDishes = model.getAllDishes("starter");
+        var allMainDishes = model.getAllDishes("main dish");
+        var allDesertDishes = model.getAllDishes("dessert");
+
+        if (typeValue == "all") {
+            var allDishes = allStarterDishes.concat(allMainDishes).concat(allDesertDishes);
+        } else {
+            var allDishes = model.getAllDishes(String(typeValue), String(filterValue));
+        }
+        getDishesHTML(allDishes);
+    }
 
     var getDishesHTML = function (allDishes) {
 
@@ -34,24 +50,7 @@ var dishSearchView = function (container, model) {
         return dishesToPrint;
     }
 
-    this.searchUpdate = function () {
-        var filterValue = document.getElementById('filterInput').value;
-        var typeSelector = document.getElementById('typeSelect');
-        var typeValue = typeSelector[typeSelector.selectedIndex].value;
-
-        if (typeValue == "all") {
-            var allDishes = allStarterDishes.concat(allMainDishes).concat(allDesertDishes);
-        } else {
-            var allDishes = model.getAllDishes(String(typeValue), String(filterValue));
-        }
-        getDishesHTML(allDishes);
-    }
-
-    //var allDishes = allStarterDishes.concat(allMainDishes).concat(allDesertDishes);
-
-    var allDishes = model.getAllDishes("starter");
-
-    getDishesHTML(allDishes);
+    this.searchUpdate();
 
 
     this.show = function () {

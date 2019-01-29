@@ -1,29 +1,28 @@
 var dishDetailsView = function (container, model) {
-	this.container = container;
-	model.addObserver(this);
-	var backToSearchBtn = "";
-	
-	this.update = function () {
-		var currentDishId = model.getSelectedDish();
-		loadView(currentDishId);
-	}
+    this.container = container;
+    model.addObserver(this);
 
-	var loadView = function (currentDishId) {
-		this.container = container;
-		this.model = model;
-		var dishView = container.find("#dishDescription");
-		currentDish = model.getDish(currentDishId);
-		allIngredients = model.getAllIngredients(currentDish);
-		var dishDescriptionData = "";
-		var dishIngredientDataStart = "";
-		var dishIngredientData = "";
-		var dishIngredientDataEnd = "";
+    this.update = function () {
+        var currentDishId = model.getSelectedDish();
+        loadView(currentDishId);
+    }
+
+    var loadView = function (currentDishId) {
+        this.container = container;
+        this.model = model;
+        var dishView = container.find("#dishDescription");
+        currentDish = model.getDish(currentDishId);
+        allIngredients = model.getAllIngredients(currentDish);
+        var dishDescriptionData = "";
+        var dishIngredientDataStart = "";
+        var dishIngredientData = "";
+        var dishIngredientDataEnd = "";
 
 
-		var row_start = '<div class="row">';
-		var row_end = '</div>';
+        var row_start = '<div class="row">';
+        var row_end = '</div>';
 
-		dishDescriptionData = `
+        dishDescriptionData = `
 				<div class="container-fluid col-12 col-sm-6 dishDesc">
 					<div class="container-fluid col-12 col-sm-10 dishDescImageCont"> 
 						<h3> ${currentDish.name} </h3> 
@@ -35,10 +34,10 @@ var dishDetailsView = function (container, model) {
 					`;
 
 
-		dishIngredientDataStart = '<div class="container-fluid col-12 col-sm-6 dishReci">' + '<h3>Ingredients for' + " 3 " + 'people</h3> <table class="table ingredientTable"> <tbody>';
+        dishIngredientDataStart = '<div class="container-fluid col-12 col-sm-6 dishReci">' + '<h3>Ingredients for' + " 3 " + 'people</h3> <table class="table ingredientTable"> <tbody>';
 
-		for (ingredient in allIngredients) {
-			dishIngredientData += `
+        for (ingredient in allIngredients) {
+            dishIngredientData += `
 			<tr>
 			<td> ${allIngredients[ingredient].quantity} </td>
 			<td> ${allIngredients[ingredient].unit} </td>
@@ -47,19 +46,17 @@ var dishDetailsView = function (container, model) {
 			<td> SEK </td>
 			</tr>
 			`
-		}
+        }
 
-		dishIngredientDataEnd = '</tbody> </table> <button class="btn btn-secondary"> Add to menu </button> </div>';
+        dishIngredientDataEnd = '</tbody> </table> <button class="btn btn-secondary"> Add to menu </button> </div>';
 
-		dishView.html(row_start + dishDescriptionData + dishIngredientDataStart + dishIngredientData + dishIngredientDataEnd + row_end);
-		backToSearchBtn = container.find('#backToSearchBtn');
-	}
-	
-	this.backToSearchBtn = container.find('#backToSearchBtn');
-	this.show = function () {
-		container.show();
-	};
-	this.hide = function () {
-		container.hide();
-	};
+        dishView.html(row_start + dishDescriptionData + dishIngredientDataStart + dishIngredientData + dishIngredientDataEnd + row_end);
+        backToSearchBtn = container.find('#backToSearchBtn');
+    }
+    this.show = function () {
+        container.show();
+    };
+    this.hide = function () {
+        container.hide();
+    };
 }
