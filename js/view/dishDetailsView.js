@@ -53,6 +53,8 @@ var dishDetailsView = function (container, model) {
         dishView.html(row_start + dishDescriptionData + dishIngredientDataStart + dishIngredientData + dishIngredientDataEnd + row_end);
         backToSearchBtn = container.find('#backToSearchBtn');
     }
+    this.update();
+
     this.show = function () {
         container.show();
     };
