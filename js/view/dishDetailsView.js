@@ -1,14 +1,15 @@
 var dishDetailsView = function (container, model) {
 
 	model.addObserver(this);
-
+	var backToSearchBtn = "";
+	
 	this.update = function () {
 		var currentDishId = model.getSelectedDish();
 		loadView(currentDishId);
 	}
 
 	var loadView = function (currentDishId) {
-
+		console.log(`dishDetailsView Loaded on dish ${currentDishId}!, efter denna load ska jag kunna lägga till knappfunktionen..`);
 		this.container = container;
 		this.model = model;
 		var dishView = container.find("#dishDescription");
@@ -52,12 +53,10 @@ var dishDetailsView = function (container, model) {
 		dishIngredientDataEnd = '</tbody> </table> <button class="btn btn-secondary"> Add to menu </button> </div>';
 
 		dishView.html(row_start + dishDescriptionDataTest + dishIngredientDataStart + dishIngredientData + dishIngredientDataEnd + row_end);
-
+		backToSearchBtn = container.find('#backToSearchBtn');
 	}
-
-	this.backToSearchButton = container.find('#backToSearchBtn');
-
-
+	
+	this.backToSearchBtn = container.find('#backToSearchBtn');
 	this.show = function () {
 		container.show();
 	};

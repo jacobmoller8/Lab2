@@ -7,7 +7,6 @@ var DinnerModel = function () {
 	var numberOfGuests = 3;
 	var menu = [1, 103, 202];
 	var selectedDish = 100;
-	console.log(selectedDish);
 
 	// Adding observer
 	this.addObserver = function (observer) {
@@ -36,7 +35,6 @@ var DinnerModel = function () {
 
 	this.setSelectedDishId = function (id) {
 		selectedDish = id;
-		console.log(selectedDish);
 		notifyObservers("selectedDish");
 	}
 
