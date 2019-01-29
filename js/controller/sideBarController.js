@@ -16,8 +16,8 @@ var sideBarController = function (view, model, app) {
 			var nrOfPeople = inputSelector[0].value;
 			model.setNumberOfGuests(parseInt(nrOfPeople));
 		})
-		
-
+		// This row ensures that the DOM value keeps in sync with the model value
+		inputSelector[0].value = model.getNumberOfGuests();
 	}
 	confirmBtnClick();
 	numberOfGuestsClicked();
