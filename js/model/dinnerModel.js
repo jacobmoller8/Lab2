@@ -6,6 +6,7 @@ var DinnerModel = function () {
 	console.log(observers);
 	var numberOfGuests = 3;
 	var menu = [1, 103, 202];
+	console.log(menu);
 	var selectedDish = 100;
 
 	// Adding observer
@@ -80,8 +81,8 @@ var DinnerModel = function () {
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function (id) {
-		var dish = this.getDish(id);
-		menu.push(dish);
+		//var dish = this.getDish(id);
+		menu.push(id);
 		notifyObservers();
 	}
 

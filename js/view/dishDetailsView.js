@@ -48,7 +48,7 @@ var dishDetailsView = function (container, model) {
 			`
         }
 
-        dishIngredientDataEnd = '</tbody> </table> <button class="btn btn-secondary"> Add to menu </button> </div>';
+        dishIngredientDataEnd = '</tbody> </table> <button class="btn btn-secondary" id="addToMenuBtn"> Add to menu </button> </div>';
 
         dishView.html(row_start + dishDescriptionData + dishIngredientDataStart + dishIngredientData + dishIngredientDataEnd + row_end);
         backToSearchBtn = container.find('#backToSearchBtn');
