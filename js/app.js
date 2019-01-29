@@ -34,10 +34,7 @@ $(function () {
 		DishDetailsView.hide();
 	}
 
-
-	// VARJE SCREEN ÄR EN SIDA FRÅN PROTOTYPEN
 	this.showHomeScreen = function () {
-		// I VARJE SCREEN SKA VI VISA DE "VIEWS" SOM ÄR AKTUELLA
 		hideAllViews();
 		HomeView.show();
 	}
