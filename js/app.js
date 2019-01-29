@@ -56,7 +56,13 @@ $(function () {
 
 	this.showDishDetailsScreen = function () {
 		hideAllViews();
+		var screenSize = $(window).width();
 		DishDetailsView.show();
+		if (screenSize >= 978) {
+			SideBarView.show();
+		} else {
+			MobileNavbarView.show();
+		}
 	}
 
 	this.showDinnerOverviewScreen = function () {
