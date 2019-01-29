@@ -48,7 +48,7 @@ var sideBarView = function (container, model) {
 
 	}
 
-	loadSideBarView(model.getFullMenu());
+	this.update();
 
 	this.show = function () {
 		container.show();

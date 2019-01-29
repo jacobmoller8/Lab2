@@ -1,5 +1,4 @@
 var sideBarController = function (view, model, app) {
-
 	this.update = function () {
 		confirmBtnClick();
 		numberOfGuestsClicked();
@@ -13,16 +12,15 @@ var sideBarController = function (view, model, app) {
 
 	var numberOfGuestsClicked = function(){
 		var inputSelector = view.container.find("#peopleSelector");
-		console.log(inputSelector);
-		var nrOfPeople = inputSelector.value;
-		console.log(parseInt(nrOfPeople));
 		inputSelector.click(function () {
+			var nrOfPeople = inputSelector[0].value;
 			model.setNumberOfGuests(parseInt(nrOfPeople));
 		})
 		
 
 	}
+	confirmBtnClick();
+	numberOfGuestsClicked();
 
-	model.addObserver(this);
 
 }
