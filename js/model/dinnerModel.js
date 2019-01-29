@@ -13,15 +13,16 @@ var DinnerModel = function () {
 		observers.push(observer);
 	}
 	// Notify observer
-	var notifyObservers = function (details) {
+	var notifyObservers = function () {
 		for (var i = 0; i < observers.length; i++) {
-			observers[i].update(details);
+			observers[i].update();
 		}
 	}
 
 	this.setNumberOfGuests = function (num) {
 		if (num < 1) return;
 		numberOfGuests = num;
+		notifyObservers();
 	}
 
 	this.getNumberOfGuests = function () {
@@ -35,7 +36,7 @@ var DinnerModel = function () {
 
 	this.setSelectedDishId = function (id) {
 		selectedDish = id;
-		notifyObservers("selectedDish");
+		notifyObservers();
 	}
 
 	this.setSelectedDish = function (name) {
@@ -44,6 +45,7 @@ var DinnerModel = function () {
 				selectedDish = dishes[key].id;
 			}
 		}
+		notifyObservers();
 	}
 
 	//Returns all the dishes on the menu.
@@ -80,6 +82,7 @@ var DinnerModel = function () {
 	this.addDishToMenu = function (id) {
 		var dish = this.getDish(id);
 		menu.push(dish);
+		notifyObservers();
 	}
 
 	//Removes dish from menu
@@ -89,11 +92,7 @@ var DinnerModel = function () {
 		while ((i = menu.indexOf(dish)) > -1) {
 			menu.splice(i, 1);
 		}
-	}
-
-	// Get the all the different dish types for dropdown selector
-	this.getAllDishTypes = function () {
-
+		notifyObservers();
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
