@@ -1,6 +1,13 @@
 var dinnerPrintoutController = function (view, model, app) {
 
-    view.goBackButton.click(function () {
-        app.showSelectDishScreen();
-    });
+	this.update = function () {
+		goBackButtonClick();
+	}
+	var goBackButtonClick = function () {
+		view.container.find("#goBackButton").click(function () {
+			app.showSelectDishScreen();
+		})
+    }
+    goBackButtonClick();
+
 }
