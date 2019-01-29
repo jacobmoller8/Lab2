@@ -1,5 +1,15 @@
 var sideBarController = function (view, model, app) {
-	view.sideBarConfirmBtn.click(function () {
-		app.showDinnerOverviewScreen();
-});
+
+	this.update = function () {
+		confirmBtnClick();
+	}
+
+	var confirmBtnClick = function () {
+		view.container.find("#sideBarConfirmBtn").click(function () {
+			app.showDinnerOverviewScreen();
+		})
+	}
+
+	model.addObserver(this);
+
 }
