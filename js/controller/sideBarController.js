@@ -2,6 +2,7 @@ var sideBarController = function (view, model, app) {
 	this.update = function () {
 		confirmBtnClick();
 		numberOfGuestsClicked();
+		removeDishClick();
 	}
 
 	var confirmBtnClick = function () {
@@ -19,6 +20,16 @@ var sideBarController = function (view, model, app) {
 		// This row ensures that the DOM value keeps in sync with the model value
 		inputSelector[0].value = model.getNumberOfGuests();
 	}
+
+	var removeDishClick = function () {
+        view.container.find(".sideBarDishItem").click(function () {
+			console.log(this.id);
+            model.removeDishFromMenu(parseInt(this.id));
+		})
+		console.log(model.getFullMenu())
+	}
+	
+	removeDishClick();
 	confirmBtnClick();
 	numberOfGuestsClicked();
 

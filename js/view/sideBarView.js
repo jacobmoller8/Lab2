@@ -27,7 +27,7 @@ var sideBarView = function (container, model) {
 			price = model.getDishPrice(allSelectedDishes[p]);
 			selectedDishesPrint += 
 			`
-			<div class="container-fluid col-12 sideBarDishItem">
+			<div class="container-fluid col-12 sideBarDishItem" id="${allSelectedDishes[p].id}">
 				<div class="row">
 					<p class="sideDishName col-6" id="selectedDishName">  ${allSelectedDishes[p].name} </p>
 					<p class="sideCost col-6" id="selectedDishCost"> ${price} </p>

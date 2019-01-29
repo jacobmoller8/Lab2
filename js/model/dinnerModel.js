@@ -87,13 +87,14 @@ var DinnerModel = function () {
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function (id) {
-		var dish = this.getDish(id);
+		// TODO: FIXA KÖN
 		var i;
-		while ((i = menu.indexOf(dish)) > -1) {
+		while ((i = menu.indexOf(id)) > -1) {
 			menu.splice(i, 1);
 		}
 		notifyObservers();
 	}
+
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
