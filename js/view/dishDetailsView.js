@@ -24,7 +24,7 @@ var dishDetailsView = function (container, model) {
 		var row_start = '<div class="row">';
 		var row_end = '</div>';
 
-		dishDescriptionDataTest = `
+		dishDescriptionData = `
 				<div class="container-fluid col-12 col-sm-6 dishDesc">
 					<div class="container-fluid col-12 col-sm-10 dishDescImageCont"> 
 						<h3> ${currentDish.name} </h3> 
@@ -52,7 +52,7 @@ var dishDetailsView = function (container, model) {
 
 		dishIngredientDataEnd = '</tbody> </table> <button class="btn btn-secondary"> Add to menu </button> </div>';
 
-		dishView.html(row_start + dishDescriptionDataTest + dishIngredientDataStart + dishIngredientData + dishIngredientDataEnd + row_end);
+		dishView.html(row_start + dishDescriptionData + dishIngredientDataStart + dishIngredientData + dishIngredientDataEnd + row_end);
 		backToSearchBtn = container.find('#backToSearchBtn');
 	}
 	
